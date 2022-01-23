@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 16433338}
   m_Layer: 0
-  m_Name: ------- Cameras ------------
+  m_Name: ------- Cameras -----------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,7 +152,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &24239306
 GameObject:
@@ -213,13 +213,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24239306}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 870977433}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &73548587
 GameObject:
@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 73548589}
   m_Layer: 0
   m_Name: "Pe\xE7a (4)"
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 209651211}
   m_Layer: 0
   m_Name: "Pe\xE7a (13)"
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -399,7 +399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 245477745}
   m_Layer: 0
-  m_Name: ------- Managers -----------
+  m_Name: ------- Managers -----------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 315659273}
   m_Layer: 0
   m_Name: "Pe\xE7a (11)"
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -619,7 +619,7 @@ Transform:
   - {fileID: 2092707572}
   - {fileID: 1065208230}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &867510771
 GameObject:
@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 867510773}
   m_Layer: 0
   m_Name: "Pe\xE7a (9)"
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -734,6 +734,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1351617953}
+  - {fileID: 24239309}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -767,7 +768,7 @@ Transform:
   m_Children:
   - {fileID: 519420032}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1065208229
 GameObject:
@@ -827,7 +828,7 @@ GameObject:
   - component: {fileID: 1155938099}
   m_Layer: 0
   m_Name: "Pe\xE7a (3)"
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -911,7 +912,7 @@ GameObject:
   - component: {fileID: 1191534413}
   m_Layer: 0
   m_Name: "Pe\xE7a (12)"
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -995,7 +996,7 @@ GameObject:
   - component: {fileID: 1192108119}
   m_Layer: 0
   m_Name: "Pe\xE7a (10)"
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1079,7 +1080,7 @@ GameObject:
   - component: {fileID: 1212219560}
   m_Layer: 0
   m_Name: "Pe\xE7a (7)"
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1163,7 +1164,7 @@ GameObject:
   - component: {fileID: 1255616627}
   m_Layer: 0
   m_Name: "Pe\xE7a"
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1378,7 +1379,7 @@ GameObject:
   - component: {fileID: 1555712984}
   m_Layer: 0
   m_Name: "Pe\xE7a (1)"
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1462,7 +1463,7 @@ GameObject:
   - component: {fileID: 1579665355}
   m_Layer: 0
   m_Name: "Pe\xE7a (8)"
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1546,7 +1547,7 @@ GameObject:
   - component: {fileID: 1629914535}
   m_Layer: 0
   m_Name: "Pe\xE7a (14)"
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1630,7 +1631,7 @@ GameObject:
   - component: {fileID: 1687931392}
   m_Layer: 0
   m_Name: "Pe\xE7a (5)"
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1714,7 +1715,7 @@ GameObject:
   - component: {fileID: 1716828893}
   m_Layer: 0
   m_Name: "Pe\xE7a (2)"
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1796,7 +1797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1861883071}
   m_Layer: 0
-  m_Name: ------- UI Elements ---------
+  m_Name: ------- UI Elements ---------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1827,7 +1828,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1918254666}
   m_Layer: 0
-  m_Name: ------- Scene Elements -----
+  m_Name: ------- Elementos Do Tabuleiro----
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1846,7 +1847,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2092707571
 GameObject:
@@ -1944,7 +1945,7 @@ GameObject:
   - component: {fileID: 2122030453}
   m_Layer: 0
   m_Name: "Pe\xE7a (6)"
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
