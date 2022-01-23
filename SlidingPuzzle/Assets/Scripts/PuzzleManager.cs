@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class PuzzleManager : MonoBehaviour
 {
-    public GameObject[] puzzlePieces;
-
+    public GameObject[] Slots;
     void Start()
     {
-        puzzlePieces = GameObject.FindGameObjectsWithTag("Puzzle");
+        Slots = GameObject.FindGameObjectsWithTag("Slot");
     }
-
-    // Update is called once per frame
     void Update()
     {
         
