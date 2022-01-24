@@ -832,7 +832,7 @@ GameObject:
   - component: {fileID: 786107404}
   m_Layer: 0
   m_Name: Selecionar
-  m_TagString: Slot
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1483,6 +1483,7 @@ GameObject:
   - component: {fileID: 1304849146}
   - component: {fileID: 1304849145}
   - component: {fileID: 1304849147}
+  - component: {fileID: 1304849149}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1517,13 +1518,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cfe3513d0227794ebc309ad3b99e102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slots: []
-  position1: []
-  position2: []
-  position3: []
-  position4: []
   selectorPosition: {x: 0, y: 0}
   selector: {fileID: 2082283820}
+  puzzleState: 0
 --- !u!114 &1304849146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1548,6 +1545,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc8a3756cc729e4bba9755c30dc11f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputThreshold: 0
+  maxInputThreshold: 0.25
 --- !u!114 &1304849148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1630,6 +1629,23 @@ MonoBehaviour:
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1304849149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304849143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da94f66f95363d340905bea460996358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots: []
+  position0: []
+  position1: []
+  position2: []
+  position3: []
 --- !u!1 &1351617952
 GameObject:
   m_ObjectHideFlags: 0
@@ -2120,7 +2136,7 @@ GameObject:
   - component: {fileID: 1639012382}
   m_Layer: 0
   m_Name: Mover
-  m_TagString: Slot
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

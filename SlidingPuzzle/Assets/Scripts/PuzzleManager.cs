@@ -5,67 +5,71 @@ using UnityEngine;
 public class PuzzleManager : MonoBehaviour
 {
     #region Variáveis
-    public GameObject[] slots;
-    public List <Vector3> position1;
-    public List <Vector3> position2;
-    public List <Vector3> position3;
-    public List <Vector3> position4;
     public Vector2 selectorPosition = new Vector2(0,0);
     public GameObject selector;
 
     #endregion
-    void Start()
+
+    public enum PuzzleState
     {
-        //Pegar slots(containers das peças) e posição das peças. 
-        slots = GameObject.FindGameObjectsWithTag("Slot");
-        CheckPosition();
-        selectorPosition = new Vector2(1,1);
+        MoveSelector,
+        PuzzleSelected,
+    }
+
+    [SerializeField]
+    private PuzzleState puzzleState;
+    private void Awake()
+    {
+        puzzleState = PuzzleState.MoveSelector;
     }
     void Update()
     {
-        CheckGameRules();
-        MoveSelector();
+        CheckPuzzleState();
     }
-    void CheckPosition()
+    void CheckPuzzleState()
     {
-        //Salva a posição das peças para move-las corretamente no tabuleiro
-
-        for(int i = 0; i < slots.Length; i++)
+        switch(puzzleState)
         {
-            if(i <= 3)
-            position1.Add(slots[i].transform.position);
-            if(i > 3 && i <= 7)
-            position2.Add(slots[i].transform.position);
-            if(i > 7 && i <= 11)
-            position3.Add(slots[i].transform.position);
-            if(i > 11 && i <= 15)
-            position4.Add(slots[i].transform.position);
+            default:
+
+            case PuzzleState.MoveSelector:
+                CheckMoveSelectorRules();
+                MoveSelector();
+            break;
+
+            case PuzzleState.PuzzleSelected:
+            
+            break;
         }
     }
-    void CheckGameRules()
+    
+    #region Checagem de regras.
+    void CheckMoveSelectorRules()
     {
         #region regras de posição do tabuleiro
-        if(selectorPosition.x > 4)
+        if(selectorPosition.x > 3)
         {
-            selectorPosition.x = 1;
+            selectorPosition.x = 0;
         }
 
-        if(selectorPosition.y > 4)
+        if(selectorPosition.y > 3)
         {
-            selectorPosition.y = 1;
+            selectorPosition.y = 0;
         }
 
-        if(selectorPosition.x < 1)
+        if(selectorPosition.x < 0)
         {
-            selectorPosition.x = 4;
+            selectorPosition.x = 3;
         }
 
-        if(selectorPosition.y < 1)
+        if(selectorPosition.y < 0)
         {
-            selectorPosition.y = 4;
+            selectorPosition.y = 3;
         }
         #endregion
     }
+    #endregion
+
     #region Métodos de adição e subtração de posição das peças(Movimentar as peças)
     public void AddPositionX()
     {
@@ -87,6 +91,25 @@ public class PuzzleManager : MonoBehaviour
 
     void MoveSelector()
     {
-        //selector.transform.position = 
+        switch (selectorPosition.y)
+        {
+            default:
+
+            case 0:
+                selector.transform.position = PeacesPositionGenerator.instance.position0[(int)selectorPosition.x];
+            break;
+
+            case 1:
+                selector.transform.position = PeacesPositionGenerator.instance.position1[(int)selectorPosition.x];
+            break;
+
+            case 2:
+                selector.transform.position = PeacesPositionGenerator.instance.position2[(int)selectorPosition.x];
+            break;
+
+            case 3:
+                selector.transform.position = PeacesPositionGenerator.instance.position3[(int)selectorPosition.x];
+            break;
+        }
     }
 }
