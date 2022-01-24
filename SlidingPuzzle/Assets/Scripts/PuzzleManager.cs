@@ -143,10 +143,10 @@ public class PuzzleManager : MonoBehaviour
         {
             if(currentPeace.GetChild(0).gameObject.tag == "Empty")
             {
-                currentPeace.SetParent(selectedPeace.GetChild(0));
-                selectedPeace.SetParent(currentPeace.GetChild(0));
-                selectedPeace.GetChild(0).transform.position = new Vector2(0,0);
-                currentPeace.GetChild(0).transform.position = new Vector2(0,0);
+                currentPeace.GetChild(0).SetParent(selectedPeace.transform, false);
+                selectedPeace.GetChild(0).SetParent(currentPeace.transform, false);
+                //selectedPeace.GetChild(0).transform.position = new Vector2(0,0);
+                //currentPeace.GetChild(0).transform.position = new Vector2(0,0);
             }
         }
     }

@@ -1604,8 +1604,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleState: 0
-  selector: {fileID: 2082283820}
-  peaceSelected: {fileID: 1937946915}
+  selector: {fileID: 786107403}
+  peaceSelected: {fileID: 1639012381}
+  currentPeace: {fileID: 0}
+  selectedPeace: {fileID: 0}
 --- !u!114 &1304849146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2224,7 +2226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1639012382
 Transform:
   m_ObjectHideFlags: 0
@@ -2583,7 +2585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1937946916
 Transform:
   m_ObjectHideFlags: 0
