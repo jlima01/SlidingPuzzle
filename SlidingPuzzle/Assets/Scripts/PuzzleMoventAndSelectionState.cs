@@ -14,49 +14,52 @@ public class PuzzleMoventAndSelectionState : PuzzleControllState
     {
         base.LogicUpdate();
 
-        moveInput = puzzleControler.inputHandler.MovementInput;
-        interactInput = puzzleControler.inputHandler.InteractInput;
-
-        //Detectar Input
-        
-        if(moveInput.x != 0)
+        if(puzzleControler.puzzleManager.GetState() != PuzzleManager.PuzzleState.Paused)
         {
-            if(!startCounter)
+            moveInput = puzzleControler.inputHandler.MovementInput;
+            interactInput = puzzleControler.inputHandler.InteractInput;
+
+            //Detectar Input
+            
+            if(moveInput.x != 0)
             {
-                startCounter = true;
-                puzzleControler.SetMoveSelector(moveInput.x, moveInput.y);
+                if(!startCounter)
+                {
+                    startCounter = true;
+                    puzzleControler.SetMoveSelector(moveInput.x, moveInput.y);
+                }
             }
-        }
-        else if(moveInput.y != 0)
-        {
-            if(!startCounter)
+            else if(moveInput.y != 0)
             {
-                startCounter = true;
-                puzzleControler.SetMoveSelector(moveInput.x, moveInput.y);
+                if(!startCounter)
+                {
+                    startCounter = true;
+                    puzzleControler.SetMoveSelector(moveInput.x, moveInput.y);
+                }
             }
-        }
 
-        if(interactInput)
-        {
-            if(!startCounter)
+            if(interactInput)
             {
-                startCounter = true;
-                puzzleControler.SetSelectPiece();
-                puzzleControler.puzzleManager.CheckIfCanSlide();
+                if(!startCounter)
+                {
+                    startCounter = true;
+                    puzzleControler.SetSelectPiece();
+                    puzzleControler.puzzleManager.CheckIfCanSlide();
+                }
             }
-        }
 
-        //Dar um pequeno tempo(cooldown) na detecção do botão(inputThreshold)
+            //Dar um pequeno tempo(cooldown) na detecção do botão(inputThreshold)
 
-        if(startCounter)
-        {
-            inputThreshold += Time.deltaTime;
-        }
+            if(startCounter)
+            {
+                inputThreshold += Time.deltaTime;
+            }
 
-        if(inputThreshold >= puzzleData.maxInputThreshold)
-        {
-            startCounter = false;
-            inputThreshold = 0;
+            if(inputThreshold >= puzzleData.maxInputThreshold)
+            {
+                startCounter = false;
+                inputThreshold = 0;
+            }
         }
     }
 }

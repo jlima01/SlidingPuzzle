@@ -20,6 +20,7 @@ public class PuzzleManager : MonoBehaviour
     {
         MoveSelector,
         PuzzleSelected,
+        Paused,
     }
     private void Awake()
     {
@@ -56,6 +57,9 @@ public class PuzzleManager : MonoBehaviour
                 MoveSelection(peaceSelected.transform, selector.transform);
                 peaceSelected.SetActive(true);
                 selector.SetActive(false);
+            break;
+
+            case PuzzleState.Paused:
             break;
         }
     }
