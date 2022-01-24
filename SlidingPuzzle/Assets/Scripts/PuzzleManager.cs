@@ -11,7 +11,7 @@ public class PuzzleManager : MonoBehaviour
     private Vector2 selectorPosition = new Vector2(0,0);
     private Vector2 initialPosition;
     public GameObject selector, peaceSelected;
-    Transform currentPeace;
+    public Transform currentPeace, selectedPeace;
     bool initialPositionDefined;
 
     #endregion
@@ -49,6 +49,7 @@ public class PuzzleManager : MonoBehaviour
                 {
                     initialPositionDefined = true;
                     initialPosition = selectorPosition;
+                    selectedPeace = currentPeace;
                 }
                 
                 CheckMoveSelectedRules();
@@ -136,9 +137,18 @@ public class PuzzleManager : MonoBehaviour
 
     #region Checar regra de Slide, troca de peças
 
-    void CheckIfCanSlide()
+    public void CheckIfCanSlide()
     {
-        
+        if(selectedPeace != null && currentPeace != null && selectedPeace.GetChild(0).gameObject != null && currentPeace.GetChild(0).gameObject != null)
+        {
+            if(currentPeace.GetChild(0).gameObject.tag == "Empty")
+            {
+                currentPeace.SetParent(selectedPeace.GetChild(0));
+                selectedPeace.SetParent(currentPeace.GetChild(0));
+                selectedPeace.GetChild(0).transform.position = new Vector2(0,0);
+                currentPeace.GetChild(0).transform.position = new Vector2(0,0);
+            }
+        }
     }
 
     #endregion

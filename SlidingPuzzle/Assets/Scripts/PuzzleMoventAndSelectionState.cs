@@ -19,7 +19,15 @@ public class PuzzleMoventAndSelectionState : PuzzleControllState
 
         //Detectar Input
         
-        if(moveInput.x != 0 || moveInput.y != 0)
+        if(moveInput.x != 0)
+        {
+            if(!startCounter)
+            {
+                startCounter = true;
+                puzzleControler.SetMoveSelector(moveInput.x, moveInput.y);
+            }
+        }
+        else if(moveInput.y != 0)
         {
             if(!startCounter)
             {
@@ -34,6 +42,7 @@ public class PuzzleMoventAndSelectionState : PuzzleControllState
             {
                 startCounter = true;
                 puzzleControler.SetSelectPeace();
+                puzzleControler.puzzleManager.CheckIfCanSlide();
             }
         }
 
