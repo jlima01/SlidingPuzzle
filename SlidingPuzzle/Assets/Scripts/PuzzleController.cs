@@ -5,10 +5,12 @@ using UnityEngine;
 public class PuzzleController : MonoBehaviour
 {
     protected InputHandler inputHandler;
+    protected PuzzleManager puzzleManager;
     private Vector2 moveInput;
     void Start()
     {
         inputHandler = GetComponent<InputHandler>();
+        puzzleManager = GetComponent<PuzzleManager>();
     }
     void Update()
     {
@@ -22,6 +24,6 @@ public class PuzzleController : MonoBehaviour
     }
     void MoveSelector(float horizontal, float vertical)
     {
-        
+
     }
 }
