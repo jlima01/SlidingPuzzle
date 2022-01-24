@@ -7,7 +7,7 @@ public class PuzzleManager : MonoBehaviour
     #region Variáveis
 
     [SerializeField]
-    private PuzzleState puzzleState;
+    protected PuzzleState puzzleState;
     private Vector2 selectorPosition = new Vector2(0,0);
     private Vector2 initialPosition;
     public GameObject selector, peaceSelected;

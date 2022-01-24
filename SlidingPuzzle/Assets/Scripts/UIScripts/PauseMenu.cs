@@ -7,8 +7,9 @@ public class PauseMenu : MonoBehaviour
 {
     public PlayerInput action;
     public static bool GameIsPaused = false;
-    public bool pauseInput;
+    bool pauseInput, isOnPieceSelection;
     public GameObject pauseHud;
+
     [SerializeField]
     protected PuzzleController puzzleController;
     private void Awake()
@@ -37,10 +38,24 @@ public class PauseMenu : MonoBehaviour
         if(GameIsPaused)
         {
             Resume(pauseHud);
-            puzzleController.puzzleManager.ChangeState(PuzzleManager.PuzzleState.MoveSelector);
+
+            if(isOnPieceSelection)
+            puzzleController.puzzleManager.ChangeState(PuzzleManager.PuzzleState.PuzzleSelected);
+            else
+            puzzleController.puzzleManager.ChangeState(PuzzleManager.PuzzleState.MoveSelector);   
         }   
         else 
         {
+            if(puzzleController.puzzleManager.GetState() == PuzzleManager.PuzzleState.MoveSelector)
+            {
+                isOnPieceSelection = false;  
+            }
+
+            if(puzzleController.puzzleManager.GetState() == PuzzleManager.PuzzleState.PuzzleSelected)
+            {
+                isOnPieceSelection = true;    
+            }
+            
             puzzleController.puzzleManager.ChangeState(PuzzleManager.PuzzleState.Paused);
             Pause(pauseHud); 
         }         

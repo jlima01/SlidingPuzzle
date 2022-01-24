@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PuzzleControllState
 {
-    protected PuzzleController puzzleControler;
+    protected PuzzleController puzzleController;
     protected InputHandler inputHandler;
     protected PuzzleManager puzzleManager;
     protected PuzzleData puzzleData;
-    public PuzzleControllState(PuzzleController puzzleControler, PuzzleData puzzleData)
+    public PuzzleControllState(PuzzleController puzzleController, PuzzleData puzzleData)
     {
-        this.puzzleControler = puzzleControler;
+        this.puzzleController = puzzleController;
         this.puzzleData = puzzleData;
     }
     public virtual void LogicUpdate(){}

@@ -6,30 +6,24 @@ using UnityEngine.Events;
 public class PieceControl : MonoBehaviour
 {
     public int puzzleID = 0;
-
     bool inRightPosition, selected, acomplished, activated = false;
-
     public static bool puzzlesInitialized = false;
-
     public GameObject effect;
-
     public Vector2 rightPosition;
 
     [SerializeField]
     protected PuzzleData puzzleData;
     public UnityEvent OnRightPosition;
-
     void Awake()
     {
         rightPosition = this.transform.position;
+        SortPuzzles();
     }
-
     void Start()
     {
         //pointX = Random.Range(minX, maxX);
         //pointY = Random.Range(minY, maxY);
-        //StartInitialPosition();
-        //SortPuzzles();
+        StartInitialPosition();
     }
 
     void Update()

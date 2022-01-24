@@ -8,16 +8,16 @@ public class PuzzleMoventAndSelectionState : PuzzleControllState
     protected bool interactInput;
     float inputThreshold = 0;
     bool startCounter = false;
-    public PuzzleMoventAndSelectionState(PuzzleController puzzleControler, PuzzleData puzzleData): base (puzzleControler, puzzleData){} 
+    public PuzzleMoventAndSelectionState(PuzzleController puzzleController, PuzzleData puzzleData): base (puzzleController, puzzleData){} 
 
     public override void LogicUpdate()
     {
         base.LogicUpdate();
 
-        if(puzzleControler.puzzleManager.GetState() != PuzzleManager.PuzzleState.Paused)
+        if(puzzleController.puzzleManager.GetState() != PuzzleManager.PuzzleState.Paused)
         {
-            moveInput = puzzleControler.inputHandler.MovementInput;
-            interactInput = puzzleControler.inputHandler.InteractInput;
+            moveInput = puzzleController.inputHandler.MovementInput;
+            interactInput = puzzleController.inputHandler.InteractInput;
 
             //Detectar Input
             
@@ -26,7 +26,7 @@ public class PuzzleMoventAndSelectionState : PuzzleControllState
                 if(!startCounter)
                 {
                     startCounter = true;
-                    puzzleControler.SetMoveSelector(moveInput.x, moveInput.y);
+                    puzzleController.SetMoveSelector(moveInput.x, moveInput.y);
                 }
             }
             else if(moveInput.y != 0)
@@ -34,7 +34,7 @@ public class PuzzleMoventAndSelectionState : PuzzleControllState
                 if(!startCounter)
                 {
                     startCounter = true;
-                    puzzleControler.SetMoveSelector(moveInput.x, moveInput.y);
+                    puzzleController.SetMoveSelector(moveInput.x, moveInput.y);
                 }
             }
 
@@ -43,8 +43,8 @@ public class PuzzleMoventAndSelectionState : PuzzleControllState
                 if(!startCounter)
                 {
                     startCounter = true;
-                    puzzleControler.SetSelectPiece();
-                    puzzleControler.puzzleManager.CheckIfCanSlide();
+                    puzzleController.SetSelectPiece();
+                    puzzleController.puzzleManager.CheckIfCanSlide();
                 }
             }
 
