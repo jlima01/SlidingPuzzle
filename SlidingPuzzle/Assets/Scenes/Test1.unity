@@ -1518,9 +1518,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cfe3513d0227794ebc309ad3b99e102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectorPosition: {x: 0, y: 0}
-  selector: {fileID: 2082283820}
   puzzleState: 0
+  selector: {fileID: 2082283820}
+  peaceSelected: {fileID: 1937946915}
 --- !u!114 &1304849146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1545,6 +1545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc8a3756cc729e4bba9755c30dc11f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
   inputThreshold: 0
   maxInputThreshold: 0.25
 --- !u!114 &1304849148

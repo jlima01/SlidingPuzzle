@@ -5,8 +5,11 @@ using UnityEngine;
 public class PuzzleManager : MonoBehaviour
 {
     #region Variáveis
-    public Vector2 selectorPosition = new Vector2(0,0);
-    public GameObject selector;
+
+    [SerializeField]
+    private PuzzleState puzzleState;
+    private Vector2 selectorPosition = new Vector2(0,0);
+    public GameObject selector, peaceSelected;
 
     #endregion
 
@@ -15,9 +18,6 @@ public class PuzzleManager : MonoBehaviour
         MoveSelector,
         PuzzleSelected,
     }
-
-    [SerializeField]
-    private PuzzleState puzzleState;
     private void Awake()
     {
         puzzleState = PuzzleState.MoveSelector;
@@ -35,14 +35,17 @@ public class PuzzleManager : MonoBehaviour
             case PuzzleState.MoveSelector:
                 CheckMoveSelectorRules();
                 MoveSelector();
+                peaceSelected.SetActive(false);
+                selector.SetActive(true);
             break;
 
             case PuzzleState.PuzzleSelected:
-            
+                peaceSelected.SetActive(true);
+                selector.SetActive(false);
             break;
         }
     }
-    
+
     #region Checagem de regras.
     void CheckMoveSelectorRules()
     {
@@ -97,19 +100,31 @@ public class PuzzleManager : MonoBehaviour
 
             case 0:
                 selector.transform.position = PeacesPositionGenerator.instance.position0[(int)selectorPosition.x];
+                peaceSelected.transform.position = selector.transform.position;
             break;
 
             case 1:
                 selector.transform.position = PeacesPositionGenerator.instance.position1[(int)selectorPosition.x];
+                peaceSelected.transform.position = selector.transform.position;
             break;
 
             case 2:
                 selector.transform.position = PeacesPositionGenerator.instance.position2[(int)selectorPosition.x];
+                peaceSelected.transform.position = selector.transform.position;
             break;
 
             case 3:
                 selector.transform.position = PeacesPositionGenerator.instance.position3[(int)selectorPosition.x];
+                peaceSelected.transform.position = selector.transform.position;
             break;
         }
+    }
+    public void ChangeState(PuzzleState stateID)
+    {
+        puzzleState = stateID;
+    }
+    public PuzzleState GetState()
+    {
+        return puzzleState;
     }
 }

@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class PuzzleController : MonoBehaviour
 {
+    [SerializeField]
+    protected PuzzleData puzzleData;
     protected InputHandler inputHandler;
     protected PuzzleManager puzzleManager;
     private Vector2 moveInput;
     protected bool interactInput;
-    public float inputThreshold = 0;
-    public float maxInputThreshold = 0.25f;
-    bool startCounter = false;
+    float inputThreshold = 0;
+    bool startCounter = false, inSelection = true;
     void Start()
     {
         inputHandler = GetComponent<InputHandler>();
@@ -26,11 +27,18 @@ public class PuzzleController : MonoBehaviour
         moveInput = inputHandler.MovementInput;
         interactInput = inputHandler.InteractInput;
 
-        MoveSelector(moveInput.x, moveInput.y);
+        if(puzzleManager.GetState() == PuzzleManager.PuzzleState.MoveSelector)
+        {
+            MoveSelector(moveInput.x, moveInput.y);
+        }
 
         if(interactInput)
         {
-            SelectPeace();
+            if(!startCounter)
+            {
+                startCounter = true;
+                SelectPeace();
+            }
         }
     }
     void CheckInputThreshold()
@@ -40,7 +48,7 @@ public class PuzzleController : MonoBehaviour
             inputThreshold += Time.deltaTime;
         }
 
-        if(inputThreshold >= maxInputThreshold)
+        if(inputThreshold >= puzzleData.maxInputThreshold)
         {
             startCounter = false;
             inputThreshold = 0;
@@ -86,6 +94,15 @@ public class PuzzleController : MonoBehaviour
     }
     void SelectPeace()
     {
-        
+        if(inSelection)
+        {
+            inSelection = false;
+            puzzleManager.ChangeState(PuzzleManager.PuzzleState.PuzzleSelected);
+        }
+        else
+        {
+            inSelection = true;
+            puzzleManager.ChangeState(PuzzleManager.PuzzleState.MoveSelector);
+        }
     }
 }
