@@ -19,7 +19,7 @@ public class PuzzleMoventAndSelectionState : PuzzleControllState
 
         //Detectar Input
         
-        if(puzzleControler.puzzleManager.GetState() == PuzzleManager.PuzzleState.MoveSelector)
+        if(moveInput.x != 0 || moveInput.y != 0)
         {
             if(!startCounter)
             {

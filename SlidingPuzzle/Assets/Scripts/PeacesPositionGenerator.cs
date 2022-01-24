@@ -6,10 +6,10 @@ public class PeacesPositionGenerator : MonoBehaviour
 {
     public static PeacesPositionGenerator instance;
     public GameObject[] slots;
-    public List <Vector3> position0;
-    public List <Vector3> position1;
-    public List <Vector3> position2;
-    public List <Vector3> position3;
+    public List <Transform> position0;
+    public List <Transform> position1;
+    public List <Transform> position2;
+    public List <Transform> position3;
     void Awake()
     {
         instance = this;
@@ -29,13 +29,13 @@ public class PeacesPositionGenerator : MonoBehaviour
         for(int i = 0; i < slots.Length; i++)
         {
             if(i <= 3)
-            position0.Add(slots[i].transform.position);
+            position0.Add(slots[i].transform);
             if(i > 3 && i <= 7)
-            position1.Add(slots[i].transform.position);
+            position1.Add(slots[i].transform);
             if(i > 7 && i <= 11)
-            position2.Add(slots[i].transform.position);
+            position2.Add(slots[i].transform);
             if(i > 11 && i <= 15)
-            position3.Add(slots[i].transform.position);
+            position3.Add(slots[i].transform);
         }
     }
 }

@@ -9,7 +9,10 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField]
     private PuzzleState puzzleState;
     private Vector2 selectorPosition = new Vector2(0,0);
+    private Vector2 initialPosition;
     public GameObject selector, peaceSelected;
+    Transform currentPeace;
+    bool initialPositionDefined;
 
     #endregion
 
@@ -33,13 +36,23 @@ public class PuzzleManager : MonoBehaviour
             default:
 
             case PuzzleState.MoveSelector:
+                initialPositionDefined = false;
                 CheckMoveSelectorRules();
-                MoveSelector();
+                MoveSelection(selector.transform, peaceSelected.transform);
                 peaceSelected.SetActive(false);
                 selector.SetActive(true);
             break;
 
             case PuzzleState.PuzzleSelected:
+
+                if(!initialPositionDefined)
+                {
+                    initialPositionDefined = true;
+                    initialPosition = selectorPosition;
+                }
+                
+                CheckMoveSelectedRules();
+                MoveSelection(peaceSelected.transform, selector.transform);
                 peaceSelected.SetActive(true);
                 selector.SetActive(false);
             break;
@@ -47,9 +60,10 @@ public class PuzzleManager : MonoBehaviour
     }
 
     #region Checagem de regras.
+
+    #region regras de posição do tabuleiro
     void CheckMoveSelectorRules()
     {
-        #region regras de posição do tabuleiro
         if(selectorPosition.x > 3)
         {
             selectorPosition.x = 0;
@@ -68,9 +82,67 @@ public class PuzzleManager : MonoBehaviour
         if(selectorPosition.y < 0)
         {
             selectorPosition.y = 3;
-        }
-        #endregion
+        }   
     }
+
+    #endregion
+
+    #region regras de posição de peça selecionada
+
+    void CheckMoveSelectedRules()
+    {
+         if(selectorPosition.x > 3)
+        {
+            selectorPosition.x = 3;
+        }
+
+        if(selectorPosition.y > 3)
+        {
+            selectorPosition.y = 3;
+        }
+
+        if(selectorPosition.x < 0)
+        {
+            selectorPosition.x = 0;
+        }
+
+        if(selectorPosition.y < 0)
+        {
+            selectorPosition.y = 0;
+        } 
+
+        if(selectorPosition.x > initialPosition.x + 1)
+        {
+            selectorPosition.x = initialPosition.x + 1;
+        }
+
+        if(selectorPosition.x < initialPosition.x - 1)
+        {
+            selectorPosition.x = initialPosition.x - 1;
+        }
+
+        if(selectorPosition.y > initialPosition.y + 1)
+        {
+            selectorPosition.y = initialPosition.y + 1;
+        }
+
+        if(selectorPosition.y < initialPosition.y - 1)
+        {
+            selectorPosition.y = initialPosition.y - 1;
+        }
+    }   
+
+    #endregion
+
+    #region Checar regra de Slide, troca de peças
+
+    void CheckIfCanSlide()
+    {
+        
+    }
+
+    #endregion
+    
     #endregion
 
     #region Métodos de adição e subtração de posição das peças(Movimentar as peças)
@@ -92,33 +164,41 @@ public class PuzzleManager : MonoBehaviour
     }
     #endregion
 
-    void MoveSelector()
+    #region Mover seletor e peça selecionada (Quadrados Verde e Vermelho)
+
+    void MoveSelection(Transform selection1, Transform selection2)
     {
         switch (selectorPosition.y)
         {
             default:
 
             case 0:
-                selector.transform.position = PeacesPositionGenerator.instance.position0[(int)selectorPosition.x];
-                peaceSelected.transform.position = selector.transform.position;
+                selection1.position = PeacesPositionGenerator.instance.position0[(int)selectorPosition.x].position;
+                selection2.position = selection1.position;
+                currentPeace = PeacesPositionGenerator.instance.position0[(int)selectorPosition.x];
             break;
 
             case 1:
-                selector.transform.position = PeacesPositionGenerator.instance.position1[(int)selectorPosition.x];
-                peaceSelected.transform.position = selector.transform.position;
+                selection1.position = PeacesPositionGenerator.instance.position1[(int)selectorPosition.x].position;
+                selection2.position = selection1.position;
+                currentPeace = PeacesPositionGenerator.instance.position1[(int)selectorPosition.x];
             break;
 
             case 2:
-                selector.transform.position = PeacesPositionGenerator.instance.position2[(int)selectorPosition.x];
-                peaceSelected.transform.position = selector.transform.position;
+                selection1.position = PeacesPositionGenerator.instance.position2[(int)selectorPosition.x].position;
+                selection2.position = selection1.position;
+                currentPeace = PeacesPositionGenerator.instance.position2[(int)selectorPosition.x];
             break;
 
             case 3:
-                selector.transform.position = PeacesPositionGenerator.instance.position3[(int)selectorPosition.x];
-                peaceSelected.transform.position = selector.transform.position;
+                selection1.position = PeacesPositionGenerator.instance.position3[(int)selectorPosition.x].position;
+                selection2.position = selection1.position;
+                currentPeace = PeacesPositionGenerator.instance.position3[(int)selectorPosition.x];
             break;
         }
     }
+
+    #endregion
     public void ChangeState(PuzzleState stateID)
     {
         puzzleState = stateID;

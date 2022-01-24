@@ -6,15 +6,15 @@ public class PuzzleController : MonoBehaviour
 {
     public InputHandler inputHandler {get; private set;}
     public PuzzleManager puzzleManager {get; private set;}
-    public PuzzleMoventAndSelectionState moventAndSelectionState {get; private set;}
+    public PuzzleMoventAndSelectionState movementAndSelectionState {get; private set;}
     public PuzzleControllState puzzleControllState {get; private set;}
     
     [SerializeField]
     protected PuzzleData puzzleData;
-    bool inSelection = true;
+    bool inSelection = false;
     private void Awake()
     {
-        moventAndSelectionState = new PuzzleMoventAndSelectionState(this, puzzleData);
+        movementAndSelectionState = new PuzzleMoventAndSelectionState(this, puzzleData);
         puzzleControllState = new PuzzleControllState(this, puzzleData);
     }
     void Start()
@@ -24,7 +24,7 @@ public class PuzzleController : MonoBehaviour
     }
      void Update()
     {
-        moventAndSelectionState.LogicUpdate();
+        movementAndSelectionState.LogicUpdate();
     }
     public void SetMoveSelector(float horizontal, float vertical)
     {
@@ -53,12 +53,12 @@ public class PuzzleController : MonoBehaviour
         if(inSelection)
         {
             inSelection = false;
-            puzzleManager.ChangeState(PuzzleManager.PuzzleState.PuzzleSelected);
+            puzzleManager.ChangeState(PuzzleManager.PuzzleState.MoveSelector);
         }
         else
         {
             inSelection = true;
-            puzzleManager.ChangeState(PuzzleManager.PuzzleState.MoveSelector);
+            puzzleManager.ChangeState(PuzzleManager.PuzzleState.PuzzleSelected);
         }
     }
 }
