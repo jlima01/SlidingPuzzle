@@ -48,7 +48,7 @@ public class PuzzleController : MonoBehaviour
             puzzleManager.AddPositionY();
         }
     }
-    public void SetSelectPeace()
+    public void SetSelectPiece()
     {
         if(inSelection)
         {

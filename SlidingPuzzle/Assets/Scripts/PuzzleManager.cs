@@ -145,8 +145,6 @@ public class PuzzleManager : MonoBehaviour
             {
                 currentPeace.GetChild(0).SetParent(selectedPeace.transform, false);
                 selectedPeace.GetChild(0).SetParent(currentPeace.transform, false);
-                //selectedPeace.GetChild(0).transform.position = new Vector2(0,0);
-                //currentPeace.GetChild(0).transform.position = new Vector2(0,0);
             }
         }
     }
