@@ -28,7 +28,7 @@ public class PieceControl : MonoBehaviour
     {
         //pointX = Random.Range(minX, maxX);
         //pointY = Random.Range(minY, maxY);
-        StartInitialPosition();
+        //StartInitialPosition();
         //SortPuzzles();
     }
 

@@ -10,6 +10,7 @@ public class GetPieces : MonoBehaviour
     public List <Transform> position1;
     public List <Transform> position2;
     public List <Transform> position3;
+    public List <Transform> fullPositions;
     void Awake()
     {
         instance = this;
@@ -34,6 +35,8 @@ public class GetPieces : MonoBehaviour
             position2.Add(slots[i].transform);
             if(i > 11 && i <= 15)
             position3.Add(slots[i].transform);
+
+            fullPositions.Add(slots[i].transform);
         }
     }
 }
