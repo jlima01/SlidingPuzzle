@@ -4,95 +4,51 @@ using UnityEngine;
 
 public class PuzzleController : MonoBehaviour
 {
+    public InputHandler inputHandler {get; private set;}
+    public PuzzleManager puzzleManager {get; private set;}
+    public PuzzleMoventAndSelectionState moventAndSelectionState {get; private set;}
+    public PuzzleControllState puzzleControllState {get; private set;}
+    
     [SerializeField]
     protected PuzzleData puzzleData;
-    protected InputHandler inputHandler;
-    protected PuzzleManager puzzleManager;
-    private Vector2 moveInput;
-    protected bool interactInput;
-    float inputThreshold = 0;
-    bool startCounter = false, inSelection = true;
+    bool inSelection = true;
+    private void Awake()
+    {
+        moventAndSelectionState = new PuzzleMoventAndSelectionState(this, puzzleData);
+        puzzleControllState = new PuzzleControllState(this, puzzleData);
+    }
     void Start()
     {
         inputHandler = GetComponent<InputHandler>();
         puzzleManager = GetComponent<PuzzleManager>();
     }
-    void Update()
+     void Update()
     {
-        HandleInput();
-        CheckInputThreshold();
+        moventAndSelectionState.LogicUpdate();
     }
-    void HandleInput()
-    {
-        moveInput = inputHandler.MovementInput;
-        interactInput = inputHandler.InteractInput;
-
-        if(puzzleManager.GetState() == PuzzleManager.PuzzleState.MoveSelector)
-        {
-            MoveSelector(moveInput.x, moveInput.y);
-        }
-
-        if(interactInput)
-        {
-            if(!startCounter)
-            {
-                startCounter = true;
-                SelectPeace();
-            }
-        }
-    }
-    void CheckInputThreshold()
-    {
-        if(startCounter)
-        {
-            inputThreshold += Time.deltaTime;
-        }
-
-        if(inputThreshold >= puzzleData.maxInputThreshold)
-        {
-            startCounter = false;
-            inputThreshold = 0;
-        }
-    }
-    void MoveSelector(float horizontal, float vertical)
+    public void SetMoveSelector(float horizontal, float vertical)
     {
         if(horizontal > 0)
         {
-            if(!startCounter)
-            {
-                startCounter = true;
-                puzzleManager.AddPositionX();
-            }
+            puzzleManager.AddPositionX();
         }
 
         if(horizontal < 0)
         {
-            if(!startCounter)
-            {
-                startCounter = true;
-                puzzleManager.SubPositionX();
-            }
+            puzzleManager.SubPositionX();
         }
 
         if(vertical > 0)
         {
-            if(!startCounter)
-            {
-                startCounter = true;
-                puzzleManager.SubPositionY();
-            }
+            puzzleManager.SubPositionY();
         }
         
         if(vertical < 0)
         {
-            if(!startCounter)
-            {
-                startCounter = true;
-                puzzleManager.AddPositionY();
-            }
+            puzzleManager.AddPositionY();
         }
     }
-    void SelectPeace()
+    public void SetSelectPeace()
     {
         if(inSelection)
         {
