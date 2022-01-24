@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class PuzzleController : MonoBehaviour
 {
     public InputHandler inputHandler {get; private set;}
@@ -12,6 +12,7 @@ public class PuzzleController : MonoBehaviour
     [SerializeField]
     protected PuzzleData puzzleData;
     bool inSelection = false;
+    public UnityEvent OnInteractAction, OnMoveAction;
     private void Awake()
     {
         movementAndSelectionState = new PuzzleMoventAndSelectionState(this, puzzleData);
@@ -59,6 +60,20 @@ public class PuzzleController : MonoBehaviour
         {
             inSelection = true;
             puzzleManager.ChangeState(PuzzleManager.PuzzleState.PuzzleSelected);
+        }
+    }
+    public void ActivateInteractAction()
+    {
+        if(OnInteractAction != null)
+        {
+            OnInteractAction.Invoke();
+        }
+    }
+    public void ActivateMoveAction()
+    {
+        if(OnMoveAction != null)
+        {
+            OnMoveAction.Invoke();
         }
     }
 }

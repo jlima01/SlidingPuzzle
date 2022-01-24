@@ -27,6 +27,7 @@ public class PuzzleMoventAndSelectionState : PuzzleControllState
                 {
                     startCounter = true;
                     puzzleController.SetMoveSelector(moveInput.x, moveInput.y);
+                    puzzleController.ActivateMoveAction();
                 }
             }
             else if(moveInput.y != 0)
@@ -35,6 +36,7 @@ public class PuzzleMoventAndSelectionState : PuzzleControllState
                 {
                     startCounter = true;
                     puzzleController.SetMoveSelector(moveInput.x, moveInput.y);
+                    puzzleController.ActivateMoveAction();
                 }
             }
 
@@ -45,6 +47,7 @@ public class PuzzleMoventAndSelectionState : PuzzleControllState
                     startCounter = true;
                     puzzleController.SetSelectPiece();
                     puzzleController.puzzleManager.CheckIfCanSlide();
+                    puzzleController.ActivateInteractAction();
                 }
             }
 

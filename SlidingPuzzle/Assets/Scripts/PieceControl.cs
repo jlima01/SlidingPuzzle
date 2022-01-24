@@ -17,13 +17,13 @@ public class PieceControl : MonoBehaviour
     void Awake()
     {
         rightPosition = this.transform.position;
-        SortPuzzles();
+        //SortPuzzles();
     }
     void Start()
     {
         //pointX = Random.Range(minX, maxX);
         //pointY = Random.Range(minY, maxY);
-        StartInitialPosition();
+        //StartInitialPosition();
     }
 
     void Update()
