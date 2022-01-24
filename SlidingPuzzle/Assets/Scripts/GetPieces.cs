@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PeacesPositionGenerator : MonoBehaviour
+public class GetPieces : MonoBehaviour
 {
-    public static PeacesPositionGenerator instance;
+    public static GetPieces instance;
     public GameObject[] slots;
     public List <Transform> position0;
     public List <Transform> position1;
@@ -16,8 +16,6 @@ public class PeacesPositionGenerator : MonoBehaviour
     }
     void Start()
     {
-        //Salvar Posição inicial das peças na posição correta(Posição de Vitória).
-        //Dispor peças aleatoriamente(Embaralhar).
         //Pegar slots(containers das peças) e posição das peças(Lista). 
         slots = GameObject.FindGameObjectsWithTag("Slot");
         CheckPosition();

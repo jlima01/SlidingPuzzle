@@ -181,27 +181,27 @@ public class PuzzleManager : MonoBehaviour
             default:
 
             case 0:
-                selection1.position = PeacesPositionGenerator.instance.position0[(int)selectorPosition.x].position;
+                selection1.position = GetPieces.instance.position0[(int)selectorPosition.x].position;
                 selection2.position = selection1.position;
-                currentPeace = PeacesPositionGenerator.instance.position0[(int)selectorPosition.x];
+                currentPeace = GetPieces.instance.position0[(int)selectorPosition.x];
             break;
 
             case 1:
-                selection1.position = PeacesPositionGenerator.instance.position1[(int)selectorPosition.x].position;
+                selection1.position = GetPieces.instance.position1[(int)selectorPosition.x].position;
                 selection2.position = selection1.position;
-                currentPeace = PeacesPositionGenerator.instance.position1[(int)selectorPosition.x];
+                currentPeace = GetPieces.instance.position1[(int)selectorPosition.x];
             break;
 
             case 2:
-                selection1.position = PeacesPositionGenerator.instance.position2[(int)selectorPosition.x].position;
+                selection1.position = GetPieces.instance.position2[(int)selectorPosition.x].position;
                 selection2.position = selection1.position;
-                currentPeace = PeacesPositionGenerator.instance.position2[(int)selectorPosition.x];
+                currentPeace = GetPieces.instance.position2[(int)selectorPosition.x];
             break;
 
             case 3:
-                selection1.position = PeacesPositionGenerator.instance.position3[(int)selectorPosition.x].position;
+                selection1.position = GetPieces.instance.position3[(int)selectorPosition.x].position;
                 selection2.position = selection1.position;
-                currentPeace = PeacesPositionGenerator.instance.position3[(int)selectorPosition.x];
+                currentPeace = GetPieces.instance.position3[(int)selectorPosition.x];
             break;
         }
     }

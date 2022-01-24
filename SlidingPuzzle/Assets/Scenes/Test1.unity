@@ -438,6 +438,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 257341500}
+  - component: {fileID: 257341501}
   m_Layer: 0
   m_Name: Slot5
   m_TagString: Slot
@@ -461,6 +462,25 @@ Transform:
   m_Father: {fileID: 1065208230}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &257341501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257341499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf194fdb57f2bf49bb065aaa296222f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleID: 0
+  effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
+  rightPosition: {x: 0, y: 0}
+  puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
+  OnRightPosition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &315659271
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,6 +574,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 350959885}
+  - component: {fileID: 350959886}
   m_Layer: 0
   m_Name: Slot9
   m_TagString: Slot
@@ -577,6 +598,25 @@ Transform:
   m_Father: {fileID: 1065208230}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &350959886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350959884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf194fdb57f2bf49bb065aaa296222f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleID: 0
+  effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
+  rightPosition: {x: 0, y: 0}
+  puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
+  OnRightPosition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &366845439
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,6 +710,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 371511709}
+  - component: {fileID: 371511710}
   m_Layer: 0
   m_Name: Slot3
   m_TagString: Slot
@@ -693,6 +734,25 @@ Transform:
   m_Father: {fileID: 1065208230}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &371511710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371511708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf194fdb57f2bf49bb065aaa296222f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleID: 0
+  effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
+  rightPosition: {x: 0, y: 0}
+  puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
+  OnRightPosition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &402809097
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,6 +762,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 402809098}
+  - component: {fileID: 402809099}
   m_Layer: 0
   m_Name: Slot7
   m_TagString: Slot
@@ -725,6 +786,25 @@ Transform:
   m_Father: {fileID: 1065208230}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &402809099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402809097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf194fdb57f2bf49bb065aaa296222f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleID: 0
+  effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
+  rightPosition: {x: 0, y: 0}
+  puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
+  OnRightPosition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,6 +898,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 598665504}
+  - component: {fileID: 598665505}
   m_Layer: 0
   m_Name: Slot6
   m_TagString: Slot
@@ -841,6 +922,25 @@ Transform:
   m_Father: {fileID: 1065208230}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &598665505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598665503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf194fdb57f2bf49bb065aaa296222f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleID: 0
+  effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
+  rightPosition: {x: 0, y: 0}
+  puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
+  OnRightPosition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &738800454
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,6 +950,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 738800455}
+  - component: {fileID: 738800456}
   m_Layer: 0
   m_Name: Slot8
   m_TagString: Slot
@@ -873,6 +974,25 @@ Transform:
   m_Father: {fileID: 1065208230}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &738800456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738800454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf194fdb57f2bf49bb065aaa296222f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleID: 0
+  effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
+  rightPosition: {x: 0, y: 0}
+  puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
+  OnRightPosition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &763093219
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,6 +1002,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 763093220}
+  - component: {fileID: 763093221}
   m_Layer: 0
   m_Name: Slot12
   m_TagString: Slot
@@ -905,6 +1026,25 @@ Transform:
   m_Father: {fileID: 1065208230}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &763093221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763093219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf194fdb57f2bf49bb065aaa296222f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleID: 0
+  effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
+  rightPosition: {x: 0, y: 0}
+  puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
+  OnRightPosition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &786107403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,6 +1170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1064379830}
+  - component: {fileID: 1064379831}
   m_Layer: 0
   m_Name: Slot0
   m_TagString: Slot
@@ -1053,6 +1194,25 @@ Transform:
   m_Father: {fileID: 1065208230}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1064379831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064379829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf194fdb57f2bf49bb065aaa296222f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleID: 0
+  effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
+  rightPosition: {x: 0, y: 0}
+  puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
+  OnRightPosition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1065208229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,6 +1272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1090858059}
+  - component: {fileID: 1090858060}
   m_Layer: 0
   m_Name: Slot10
   m_TagString: Slot
@@ -1135,6 +1296,25 @@ Transform:
   m_Father: {fileID: 1065208230}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1090858060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090858058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf194fdb57f2bf49bb065aaa296222f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleID: 0
+  effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
+  rightPosition: {x: 0, y: 0}
+  puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
+  OnRightPosition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1155938097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,6 +1749,7 @@ GameObject:
   - component: {fileID: 1304849145}
   - component: {fileID: 1304849147}
   - component: {fileID: 1304849149}
+  - component: {fileID: 1304849150}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1732,6 +1913,21 @@ MonoBehaviour:
   position1: []
   position2: []
   position3: []
+--- !u!114 &1304849150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304849143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a8ec373513758429175d68e077e4f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  piecesList: []
+  puzzlesArray: []
+  puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
 --- !u!1 &1351617952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,6 +2037,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1426494750}
+  - component: {fileID: 1426494751}
   m_Layer: 0
   m_Name: Slot14
   m_TagString: Slot
@@ -1864,6 +2061,25 @@ Transform:
   m_Father: {fileID: 1065208230}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1426494751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426494749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf194fdb57f2bf49bb065aaa296222f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleID: 0
+  effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
+  rightPosition: {x: 0, y: 0}
+  puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
+  OnRightPosition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1440660250
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,6 +2120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1476278638}
+  - component: {fileID: 1476278639}
   m_Layer: 0
   m_Name: Slot13
   m_TagString: Slot
@@ -1927,6 +2144,25 @@ Transform:
   m_Father: {fileID: 1065208230}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1476278639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476278637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf194fdb57f2bf49bb065aaa296222f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleID: 0
+  effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
+  rightPosition: {x: 0, y: 0}
+  puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
+  OnRightPosition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1555712982
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,6 +2256,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1577561246}
+  - component: {fileID: 1577561247}
   m_Layer: 0
   m_Name: Slot4
   m_TagString: Slot
@@ -2043,6 +2280,25 @@ Transform:
   m_Father: {fileID: 1065208230}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1577561247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577561245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf194fdb57f2bf49bb065aaa296222f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleID: 0
+  effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
+  rightPosition: {x: 0, y: 0}
+  puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
+  OnRightPosition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1579665353
 GameObject:
   m_ObjectHideFlags: 0
@@ -2420,6 +2676,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1858117267}
+  - component: {fileID: 1858117268}
   m_Layer: 0
   m_Name: Slot11
   m_TagString: Slot
@@ -2443,6 +2700,25 @@ Transform:
   m_Father: {fileID: 1065208230}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1858117268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858117266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf194fdb57f2bf49bb065aaa296222f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleID: 0
+  effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
+  rightPosition: {x: 0, y: 0}
+  puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
+  OnRightPosition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1861883070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2483,6 +2759,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1906158549}
+  - component: {fileID: 1906158550}
   m_Layer: 0
   m_Name: Slot1
   m_TagString: Slot
@@ -2506,6 +2783,25 @@ Transform:
   m_Father: {fileID: 1065208230}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1906158550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906158548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf194fdb57f2bf49bb065aaa296222f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleID: 0
+  effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
+  rightPosition: {x: 0, y: 0}
+  puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
+  OnRightPosition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1917000547
 GameObject:
   m_ObjectHideFlags: 0
@@ -2515,6 +2811,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1917000548}
+  - component: {fileID: 1917000549}
   m_Layer: 0
   m_Name: Slot15
   m_TagString: Slot
@@ -2538,6 +2835,25 @@ Transform:
   m_Father: {fileID: 1065208230}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1917000549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917000547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf194fdb57f2bf49bb065aaa296222f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleID: 0
+  effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
+  rightPosition: {x: 0, y: 0}
+  puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
+  OnRightPosition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1918254665
 GameObject:
   m_ObjectHideFlags: 0
@@ -2662,6 +2978,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2003501113}
+  - component: {fileID: 2003501114}
   m_Layer: 0
   m_Name: Slot2
   m_TagString: Slot
@@ -2685,6 +3002,25 @@ Transform:
   m_Father: {fileID: 1065208230}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2003501114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003501112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf194fdb57f2bf49bb065aaa296222f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleID: 0
+  effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
+  rightPosition: {x: 0, y: 0}
+  puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
+  OnRightPosition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2082283820
 GameObject:
   m_ObjectHideFlags: 0

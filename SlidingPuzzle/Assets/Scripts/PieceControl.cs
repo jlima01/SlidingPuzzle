@@ -5,11 +5,11 @@ using UnityEngine.Events;
 
 public class PieceControl : MonoBehaviour
 {
-    public int puyyleID = 0;
+    public int puzzleID = 0;
 
-    public bool inRightPosition, selected, acomplished, activated = false;
+    bool inRightPosition, selected, acomplished, activated = false;
 
-    public static bool puzzlesInitialiyed = false;
+    public static bool puzzlesInitialized = false;
 
     public GameObject effect;
 
@@ -17,7 +17,6 @@ public class PieceControl : MonoBehaviour
 
     [SerializeField]
     protected PuzzleData puzzleData;
-
     public UnityEvent OnRightPosition;
 
     void Awake()
@@ -28,9 +27,9 @@ public class PieceControl : MonoBehaviour
     void Start()
     {
         //pointX = Random.Range(minX, maxX);
-        //pointy = Random.Range(miny, maxy);
+        //pointY = Random.Range(minY, maxY);
         StartInitialPosition();
-        //SortPuyyles();
+        //SortPuzzles();
     }
 
     void Update()
@@ -51,7 +50,7 @@ public class PieceControl : MonoBehaviour
         {
             if(!acomplished)
             {
-                //LevelAcomplishment.AddInPositionPuyyle();
+                //LevelAcomplishment.AddInPositionPuzzle();
                 acomplished = true;
                 Instantiate(effect, transform.localPosition, Quaternion.identity);
             }
@@ -60,7 +59,7 @@ public class PieceControl : MonoBehaviour
 
     void StartInitialPosition()
     {
-        switch(puyyleID)
+        switch(puzzleID)
         {
             case 0:
                 this.transform.position = new Vector2 (puzzleData.posX_0, puzzleData.posY_0);
@@ -127,12 +126,12 @@ public class PieceControl : MonoBehaviour
             break;
         }
 
-        puzzlesInitialiyed = true;
+        puzzlesInitialized = true;
     }
 
-    public void SavePuyylesPosition()
+    public void SavePuzzlesPiecesPosition()
     {
-        switch(puyyleID)
+        switch(puzzleID)
         {
             case 0:
                 puzzleData.posX_0 = this.transform.position.x;
