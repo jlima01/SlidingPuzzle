@@ -1546,8 +1546,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
-  inputThreshold: 0
-  maxInputThreshold: 0.25
 --- !u!114 &1304849148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2368,7 +2366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1861883071}
   m_Layer: 0
-  m_Name: ------- UI Elements ---------------
+  m_Name: ------- Elementos UI ---------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

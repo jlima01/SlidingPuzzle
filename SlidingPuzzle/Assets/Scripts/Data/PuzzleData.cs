@@ -7,4 +7,11 @@ public class PuzzleData : ScriptableObject
 {
     [Header("Input")]
     public float maxInputThreshold = 0.25f;
+
+    [Header("Color Manager")]
+    public float color;
+
+    [Header("Puzzle Peaces Position")]
+    public Vector3 position;
+
 }
