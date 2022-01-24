@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class PuzzleManager : MonoBehaviour
 {
+    #region Variáveis
     public GameObject[] slots;
     public List <Vector3> position;
+
+    #endregion
     void Start()
     {
+        //Pegar slots e posição das peças. 
         slots = GameObject.FindGameObjectsWithTag("Slot");
         CheckPosition();
     }

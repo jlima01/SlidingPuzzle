@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Puzzle
   - Slot
+  - Empty
   layers:
   - Default
   - TransparentFX
