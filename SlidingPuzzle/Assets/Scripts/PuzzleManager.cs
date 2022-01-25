@@ -5,6 +5,7 @@ using UnityEngine;
 public class PuzzleManager : MonoBehaviour
 {
     #region Variáveis
+    public static PuzzleManager instance;
 
     [SerializeField]
     protected PuzzleState puzzleState;
@@ -13,6 +14,7 @@ public class PuzzleManager : MonoBehaviour
     public GameObject selector, peaceSelected;
     public Transform currentPeace, selectedPeace;
     bool initialPositionDefined;
+    int piecesInRightPosition = 0;
 
     #endregion
 
@@ -25,6 +27,7 @@ public class PuzzleManager : MonoBehaviour
     private void Awake()
     {
         puzzleState = PuzzleState.MoveSelector;
+        instance = this;
     }
     void Update()
     {
@@ -215,6 +218,15 @@ public class PuzzleManager : MonoBehaviour
     public void ChangeState(PuzzleState stateID)
     {
         puzzleState = stateID;
+    }
+    public void LevelCompleted()
+    {
+        piecesInRightPosition += 1;
+
+        if(piecesInRightPosition >= 14)
+        {
+            PauseMenu.GameIsFinished = true;
+        }
     }
     public PuzzleState GetState()
     {

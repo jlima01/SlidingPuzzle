@@ -6,9 +6,9 @@ using UnityEngine.InputSystem;
 public class PauseMenu : MonoBehaviour
 {
     public PlayerInput action;
-    public static bool GameIsPaused = false;
+    public static bool GameIsPaused, GameIsFinished = false;
     bool pauseInput, isOnPieceSelection;
-    public GameObject pauseHud;
+    public GameObject pauseHud, winHud;
 
     [SerializeField]
     protected PuzzleController puzzleController;
@@ -32,6 +32,16 @@ public class PauseMenu : MonoBehaviour
     private void Start()
     {
         action.Gameplay.Pause.performed += _ => DeterminePause();
+
+        PauseMenu.GameIsFinished = false;
+        PauseMenu.GameIsPaused = false;
+    }
+    void Update()
+    {
+        if(GameIsFinished)
+        {
+            GameWin();
+        }
     }
     private void DeterminePause()
     {
@@ -80,9 +90,9 @@ public class PauseMenu : MonoBehaviour
         //Time.timeScale = 0f;
         GameIsPaused = true;  
    }
-   public void WinHud()
+   public void GameWin()
    {
-        //winHud.SetActive(true);
+        winHud.SetActive(true);
         //Time.timeScale = 0f;
         GameIsPaused = true;
    }

@@ -6,25 +6,35 @@ using UnityEngine.Events;
 public class PieceControl : MonoBehaviour
 {
     public int puzzleID = 0;
+    public List<int> piecesID;
     bool inRightPosition, activated = false;
     public GameObject effect;
     public Vector2 rightPosition;
+    protected GameObject gameManager;
 
     [SerializeField]
     protected PuzzleData puzzleData;
     public UnityEvent OnRightPosition;
     void Awake()
     {
-        rightPosition = this.transform.position;
+        inRightPosition = false;
     }
     void Start()
     {
-    
+        StartInitialPosition();
     }
 
     void Update()
     {
-        
+        if(!inRightPosition)
+        {
+            if(transform.GetChild(0).GetComponent<PiecesID>().GetPieceID() == puzzleID)
+            {
+                inRightPosition = true;
+                PuzzleManager.instance.LevelCompleted();
+                ActivateInRightPositionAction();
+            }
+        }
     }
 
     void StartInitialPosition()
