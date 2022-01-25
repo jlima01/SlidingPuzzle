@@ -223,7 +223,7 @@ public class PuzzleManager : MonoBehaviour
     {
         piecesInRightPosition += 1;
 
-        if(piecesInRightPosition >= 1)
+        if(piecesInRightPosition >= 15)
         {
             PauseMenu.GameIsFinished = true;
         }
