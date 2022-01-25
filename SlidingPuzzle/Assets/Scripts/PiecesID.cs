@@ -7,15 +7,12 @@ public class PiecesID : MonoBehaviour
 {
     public Sprite[] sp;
     public int id = 0;
+    int temp;
     public Text text;
-    public static int rand = 0;
+    public static List <int> rand, tempList;
 
     [SerializeField]
     protected PuzzleData puzzleData;
-    void Awake()
-    {
-        id = Random.Range(0, 15);
-    }
     void Start()
     {
         text.text = "" + id;
