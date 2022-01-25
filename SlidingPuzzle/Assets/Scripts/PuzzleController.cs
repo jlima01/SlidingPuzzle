@@ -54,13 +54,13 @@ public class PuzzleController : MonoBehaviour
         if(inSelection)
         {
             inSelection = false;
-            puzzleManager.ChangeState(PuzzleManager.PuzzleState.PuzzleSelected);
+            puzzleManager.ChangeState(PuzzleManager.PuzzleState.MoveSelector);
             ActivateInteractAction();
         }
         else
         {
             inSelection = true;
-            puzzleManager.ChangeState(PuzzleManager.PuzzleState.MoveSelector);
+            puzzleManager.ChangeState(PuzzleManager.PuzzleState.PuzzleSelected);
             ActivateInteractAction();
         }
     }
