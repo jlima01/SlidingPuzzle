@@ -47,7 +47,7 @@ public class PuzzleMoventAndSelectionState : PuzzleControllState
                     startCounter = true;
                     puzzleController.SetSelectPiece();
                     puzzleController.puzzleManager.CheckIfCanSlide();
-                    puzzleController.ActivateInteractAction();
+                    //puzzleController.ActivateInteractAction();
                 }
             }
 

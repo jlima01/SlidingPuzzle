@@ -5,9 +5,22 @@ using UnityEngine;
 public class Destroy : MonoBehaviour
 {
     public float time;
+    float counter = 0;
+    public bool hide = false;
 
     void Start()
     {
-        Destroy(gameObject, time);
+        if(hide)
+        {
+            Invoke("HideObject", time);
+        }
+        else
+        {
+            Destroy(gameObject, time);
+        }
+    }
+    void HideObject()
+    {
+        gameObject.SetActive(false);
     }
 }
