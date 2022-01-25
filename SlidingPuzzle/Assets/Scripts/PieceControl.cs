@@ -28,12 +28,15 @@ public class PieceControl : MonoBehaviour
     {
         if(!inRightPosition)
         {
-            /* if(transform.GetChild(0).GetComponent<PiecesID>().GetPieceID() == puzzleID)
+            if(transform.GetChild(0) != null && transform.GetChild(0).GetComponent<PiecesID>() != null)
             {
-                inRightPosition = true;
-                PuzzleManager.instance.LevelCompleted();
-                ActivateInRightPositionAction();
-            } */
+                if(transform.GetChild(0).GetComponent<PiecesID>().GetPieceID() == puzzleID)
+                {
+                    inRightPosition = true;
+                    PuzzleManager.instance.LevelCompleted();
+                    ActivateInRightPositionAction();
+                }
+            }
         }
     }
 

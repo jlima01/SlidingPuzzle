@@ -5,7 +5,6 @@ using UnityEngine;
 public class Destroy : MonoBehaviour
 {
     public float time;
-    float counter = 0;
     public bool hide = false;
 
     void Start()
