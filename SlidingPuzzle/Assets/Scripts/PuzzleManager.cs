@@ -37,6 +37,7 @@ public class PuzzleManager : MonoBehaviour
             default:
 
             case PuzzleState.MoveSelector:
+                selectedPeace = null;
                 initialPositionDefined = false;
                 CheckMoveSelectorRules();
                 MoveSelection(selector.transform, peaceSelected.transform);
