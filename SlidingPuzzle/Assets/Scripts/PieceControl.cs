@@ -21,23 +21,23 @@ public class PieceControl : MonoBehaviour
     }
     void Start()
     {
-        StartInitialPosition();
+        CreatePuzzlePiece();
     }
 
     void Update()
     {
         if(!inRightPosition)
         {
-            if(transform.GetChild(0).GetComponent<PiecesID>().GetPieceID() == puzzleID)
+            /* if(transform.GetChild(0).GetComponent<PiecesID>().GetPieceID() == puzzleID)
             {
                 inRightPosition = true;
                 PuzzleManager.instance.LevelCompleted();
                 ActivateInRightPositionAction();
-            }
+            } */
         }
     }
 
-    void StartInitialPosition()
+    void CreatePuzzlePiece()
     {
         
     }

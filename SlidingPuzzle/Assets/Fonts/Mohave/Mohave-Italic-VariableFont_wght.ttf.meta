@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bb72f5d2f73490d4c98933f9a1ba7be4
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Mohave
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f0d6b5ef116a01848b94b8df1963d66d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

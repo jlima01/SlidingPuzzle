@@ -36,14 +36,7 @@ public class SortPieces : MonoBehaviour
 
     public void Sort()
     {
-        for(int i = 0; i < piecesList.Count; i++)
-        {
-            positonInTheList = Random.Range(0, piecesList.Count);
-            position[i] = piecesList[(int)positonInTheList].transform.position;
-            puzzleData.posX_0 = position[i].x;
-            puzzleData.posY_0 = position[i].y;
-            piecesList.Remove(piecesList[(int)positonInTheList]);
-        }
+        
     }
     /* public void SavePuzzlePieces()
     {

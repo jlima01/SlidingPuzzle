@@ -14,11 +14,12 @@ public class GetPieces : MonoBehaviour
     void Awake()
     {
         instance = this;
+
+        //Pegar slots(containers das peças) e posição das peças(Lista). 
+        slots = GameObject.FindGameObjectsWithTag("Slot");
     }
     void Start()
     {
-        //Pegar slots(containers das peças) e posição das peças(Lista). 
-        slots = GameObject.FindGameObjectsWithTag("Slot");
         CheckPosition();
     }
     void CheckPosition()

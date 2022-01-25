@@ -808,6 +808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleID: 5
+  piecesID: 
   effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
   rightPosition: {x: 0, y: 0}
   puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
@@ -959,6 +960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleID: 9
+  piecesID: 
   effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
   rightPosition: {x: 0, y: 0}
   puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
@@ -1095,6 +1097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleID: 3
+  piecesID: 
   effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
   rightPosition: {x: 0, y: 0}
   puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
@@ -1147,6 +1150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleID: 7
+  piecesID: 
   effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
   rightPosition: {x: 0, y: 0}
   puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
@@ -1565,6 +1569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleID: 6
+  piecesID: 
   effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
   rightPosition: {x: 0, y: 0}
   puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
@@ -1779,7 +1784,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1926,6 +1931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleID: 8
+  piecesID: 
   effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
   rightPosition: {x: 0, y: 0}
   puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
@@ -1978,6 +1984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleID: 12
+  piecesID: 
   effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
   rightPosition: {x: 0, y: 0}
   puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
@@ -2352,6 +2359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleID: 0
+  piecesID: 
   effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
   rightPosition: {x: 0, y: 0}
   puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
@@ -2555,6 +2563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleID: 10
+  piecesID: 
   effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
   rightPosition: {x: 0, y: 0}
   puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
@@ -2790,7 +2799,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d8d04c6f80a1140db85ede568dab1f51, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3918,6 +3927,7 @@ GameObject:
   - component: {fileID: 1304849145}
   - component: {fileID: 1304849147}
   - component: {fileID: 1304849149}
+  - component: {fileID: 1304849150}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4112,6 +4122,21 @@ MonoBehaviour:
   position2: []
   position3: []
   fullPositions: []
+--- !u!114 &1304849150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304849143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb1f38490c998434ab2d3b82b012e6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pieces: []
+  slotsList: []
+  slots: []
 --- !u!1 &1351617952
 GameObject:
   m_ObjectHideFlags: 0
@@ -4227,6 +4252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseHud: {fileID: 1583351703}
+  winHud: {fileID: 0}
   puzzleController: {fileID: 1304849147}
 --- !u!1 &1426494749
 GameObject:
@@ -4274,6 +4300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleID: 14
+  piecesID: 
   effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
   rightPosition: {x: 0, y: 0}
   puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
@@ -4517,6 +4544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleID: 13
+  piecesID: 
   effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
   rightPosition: {x: 0, y: 0}
   puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
@@ -4668,6 +4696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleID: 4
+  piecesID: 
   effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
   rightPosition: {x: 0, y: 0}
   puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
@@ -5852,6 +5881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleID: 11
+  piecesID: 
   effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
   rightPosition: {x: 0, y: 0}
   puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
@@ -6238,6 +6268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleID: 1
+  piecesID: 
   effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
   rightPosition: {x: 0, y: 0}
   puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
@@ -6290,6 +6321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleID: 15
+  piecesID: 
   effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
   rightPosition: {x: 0, y: 0}
   puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}
@@ -6617,6 +6649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleID: 2
+  piecesID: 
   effect: {fileID: 5190414509851259613, guid: 001b03e4ccc558d42946ba6998b89c91, type: 3}
   rightPosition: {x: 0, y: 0}
   puzzleData: {fileID: 11400000, guid: 85420a232eaf62c4189d53739c9d2854, type: 2}

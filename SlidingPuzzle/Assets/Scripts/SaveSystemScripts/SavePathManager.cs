@@ -116,38 +116,7 @@ public class SavePathManager : MonoBehaviour
 
     void Load()
     {
-        puzzleData.posX_0 = LoadGameData.GetData().posX_0;
-        puzzleData.posY_0 = LoadGameData.GetData().posY_0;
-        puzzleData.posX_1 = LoadGameData.GetData().posX_1;
-        puzzleData.posY_1 = LoadGameData.GetData().posY_1;
-        puzzleData.posX_2 = LoadGameData.GetData().posX_2;
-        puzzleData.posY_2 = LoadGameData.GetData().posY_2;
-        puzzleData.posX_3 = LoadGameData.GetData().posX_3;
-        puzzleData.posY_3 = LoadGameData.GetData().posY_3;
-        puzzleData.posX_4 = LoadGameData.GetData().posX_4;
-        puzzleData.posY_4 = LoadGameData.GetData().posY_4;
-        puzzleData.posX_5 = LoadGameData.GetData().posX_5;
-        puzzleData.posY_5 = LoadGameData.GetData().posY_5;
-        puzzleData.posX_6 = LoadGameData.GetData().posX_6;
-        puzzleData.posY_6 = LoadGameData.GetData().posY_6;
-        puzzleData.posX_7 = LoadGameData.GetData().posX_7;
-        puzzleData.posY_7 = LoadGameData.GetData().posY_7;
-        puzzleData.posX_8 = LoadGameData.GetData().posX_8;
-        puzzleData.posY_8 = LoadGameData.GetData().posY_8;
-        puzzleData.posX_9 = LoadGameData.GetData().posX_9;
-        puzzleData.posY_9 = LoadGameData.GetData().posY_9;
-        puzzleData.posX_10 = LoadGameData.GetData().posX_10;
-        puzzleData.posY_10 = LoadGameData.GetData().posY_10;
-        puzzleData.posX_11 = LoadGameData.GetData().posX_11;
-        puzzleData.posY_11 = LoadGameData.GetData().posY_11;
-        puzzleData.posX_12 = LoadGameData.GetData().posX_12;
-        puzzleData.posY_12 = LoadGameData.GetData().posY_12;
-        puzzleData.posX_13 = LoadGameData.GetData().posX_13;
-        puzzleData.posY_13 = LoadGameData.GetData().posY_13;
-        puzzleData.posX_14 = LoadGameData.GetData().posX_14;
-        puzzleData.posY_14 = LoadGameData.GetData().posY_14;
-        puzzleData.posX_15 = LoadGameData.GetData().posX_15;
-        puzzleData.posY_15 = LoadGameData.GetData().posY_15;
+        puzzleData.slot0 = LoadGameData.GetData().slot0;
 
         ActivateFileFoundedAction();
     }

@@ -225,7 +225,8 @@ public class PuzzleManager : MonoBehaviour
 
         if(piecesInRightPosition >= 14)
         {
-            PauseMenu.GameIsFinished = true;
+            //PauseMenu.GameIsFinished = true;
+            Debug.Log("Win!");
         }
     }
     public PuzzleState GetState()
