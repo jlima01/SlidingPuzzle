@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -13,8 +14,9 @@ public class PuzzleManager : MonoBehaviour
     private Vector2 initialPosition;
     public GameObject selector, peaceSelected;
     public Transform currentPeace, selectedPeace;
-    bool initialPositionDefined;
+    bool initialPositionDefined, activated;
     int piecesInRightPosition = 0;
+    public UnityEvent OnRightPosition;
 
     #endregion
 
@@ -226,10 +228,22 @@ public class PuzzleManager : MonoBehaviour
         if(piecesInRightPosition >= 15)
         {
             PauseMenu.GameIsFinished = true;
+            ActivateInRightPositionAction();
         }
     }
     public PuzzleState GetState()
     {
         return puzzleState;
+    }
+    public void ActivateInRightPositionAction()
+    {
+        if(OnRightPosition != null)
+        {
+            if(!activated)
+            {
+                OnRightPosition.Invoke();
+                activated = true;
+            }
+        }
     }
 }

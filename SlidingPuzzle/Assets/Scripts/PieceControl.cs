@@ -34,7 +34,7 @@ public class PieceControl : MonoBehaviour
                 {
                     inRightPosition = true;
                     PuzzleManager.instance.LevelCompleted();
-                    ActivateInRightPositionAction();
+                    //ActivateInRightPositionAction();
                 }
             }
         }
